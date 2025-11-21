@@ -1,0 +1,10 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Modelsim_projects/Project/EE354_vga_demo/counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module counter
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Modelsim_projects/Project/EE354_vga_demo/display_controller.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module display_controller
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Modelsim_projects/Project/EE354_vga_demo/vga_bitchange.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga_bitchange
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Modelsim_projects/Project/EE354_vga_demo/vga_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Modelsim_projects/Project/Tron/Tron.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

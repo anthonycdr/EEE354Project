@@ -1,0 +1,12 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../../../../Xilinx/2025.1/Vivado/data/rsb/busdef" \
+"../../../../../EE354_vga_demo/counter.v" \
+"../../../../../EE354_vga_demo/display_controller.v" \
+"../../../../../EE354_vga_demo/vga_bitchange.v" \
+"../../../../../EE354_vga_demo/vga_top.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

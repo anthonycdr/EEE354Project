@@ -1,0 +1,9 @@
+0.7
+2020.2
+May 22 2025
+00:13:55
+C:/Modelsim_projects/Project/EE354_vga_demo/counter.v,1763687813,verilog,,C:/Modelsim_projects/Project/EE354_vga_demo/display_controller.v,,counter,,,../../../../../../../Xilinx/2025.1/Vivado/data/rsb/busdef,,,,,
+C:/Modelsim_projects/Project/EE354_vga_demo/display_controller.v,1763687813,verilog,,C:/Modelsim_projects/Project/EE354_vga_demo/vga_bitchange.v,,display_controller,,,../../../../../../../Xilinx/2025.1/Vivado/data/rsb/busdef,,,,,
+C:/Modelsim_projects/Project/EE354_vga_demo/vga_bitchange.v,1763687813,verilog,,C:/Modelsim_projects/Project/EE354_vga_demo/vga_top.v,,vga_bitchange,,,../../../../../../../Xilinx/2025.1/Vivado/data/rsb/busdef,,,,,
+C:/Modelsim_projects/Project/EE354_vga_demo/vga_top.v,1763687813,verilog,,,,vga_top,,,../../../../../../../Xilinx/2025.1/Vivado/data/rsb/busdef,,,,,
+C:/Modelsim_projects/Project/Tron/Tron.sim/sim_1/behav/xsim/glbl.v,1741209010,verilog,,,,glbl,,,,,,,,
