@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2025.1 (64-bit)
+# SW Build 6140274 on Thu May 22 00:12:29 MDT 2025
+# IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
+# SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
+# Start of session at: Sat Nov 29 21:59:11 2025
+# Process ID         : 17944
+# Current directory  : C:/Modelsim_projects/Project/Tron/Tron.runs/impl_1
+# Command line       : vivado.exe -log vga_top.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source vga_top.tcl -notrace
+# Log file           : C:/Modelsim_projects/Project/Tron/Tron.runs/impl_1/vga_top.vdi
+# Journal file       : C:/Modelsim_projects/Project/Tron/Tron.runs/impl_1\vivado.jou
+# Running On         : LAPTOP-54NUE9F1
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26100
+# Processor Detail   : AMD Ryzen 9 270 w/ Radeon 780M Graphics        
+# CPU Frequency      : 3993 MHz
+# CPU Physical cores : 8
+# CPU Logical cores  : 16
+# Host memory        : 16422 MB
+# Swap memory        : 27917 MB
+# Total Virtual      : 44339 MB
+# Available Virtual  : 10307 MB
+#-----------------------------------------------------------
+source vga_top.tcl -notrace

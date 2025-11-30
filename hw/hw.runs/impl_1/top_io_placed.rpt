@@ -1,8 +1,8 @@
-Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
--------------------------------------------------------------------------------------------------
-| Tool Version              : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-| Date                      : Wed Jul 27 13:48:57 2022
-| Host                      : sim-ro running 64-bit major release  (build 9200)
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version              : Vivado v.2025.1 (win64) Build 6140274 Thu May 22 00:12:29 MDT 2025
+| Date                      : Thu Nov 20 18:00:56 2025
+| Host                      : LAPTOP-54NUE9F1 running 64-bit major release  (build 9200)
 | Command                   : report_io -file top_io_placed.rpt
 | Design                    : top
 | Device                    : xc7a100t
@@ -10,7 +10,7 @@ Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 | Package                   : csg324
 | Package Version           : FINAL 2012-07-17
 | Package Pin Delay Version : VERS. 2.0 2012-07-17
--------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------
 
 IO Information
 

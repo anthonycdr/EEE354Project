@@ -1,17 +1,40 @@
 #-----------------------------------------------------------
-# Vivado v2021.1 (64-bit)
-# SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
-# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
-# Start of session at: Wed Jul 27 13:04:40 2022
-# Process ID: 291868
-# Current directory: C:/Users/bokiss/AppData/Roaming/Xilinx/Vivado
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent103384
-# Log file: C:/Users/bokiss/AppData/Roaming/Xilinx/Vivado/vivado.log
-# Journal file: C:/Users/bokiss/AppData/Roaming/Xilinx/Vivado\vivado.jou
+# Vivado v2025.1 (64-bit)
+# SW Build 6140274 on Thu May 22 00:12:29 MDT 2025
+# IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
+# SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
+# Start of session at: Thu Nov 20 17:59:16 2025
+# Process ID         : 28272
+# Current directory  : C:/Modelsim_projects/Project/hw
+# Command line       : vivado.exe -gui_launcher_event rodinguilauncherevent26776 C:\Modelsim_projects\Project\hw\hw.xpr
+# Log file           : C:/Modelsim_projects/Project/hw/vivado.log
+# Journal file       : C:/Modelsim_projects/Project/hw\vivado.jou
+# Running On         : LAPTOP-54NUE9F1
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26100
+# Processor Detail   : AMD Ryzen 9 270 w/ Radeon 780M Graphics        
+# CPU Frequency      : 3993 MHz
+# CPU Physical cores : 8
+# CPU Logical cores  : 16
+# Host memory        : 16422 MB
+# Swap memory        : 27917 MB
+# Total Virtual      : 44339 MB
+# Available Virtual  : 16241 MB
 #-----------------------------------------------------------
 start_gui
-source {D:/WorkBORI/keyboard/Nexys-A7/hw/scripts/checkout.tcl}
+open_project C:/Modelsim_projects/Project/hw/hw.xpr
 update_compile_order -fileset sources_1
-launch_runs impl_1 -to_step write_bitstream -jobs 24
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
 wait_on_run impl_1
-archive_project D:/WorkBORI/keyboard/Nexys-A7/hw/Nexys-A7-100T-Keyboard-hw.xpr.zip -temp_dir C:/Users/bokiss/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-291868-sim-ro -force -include_local_ip_cache -include_config_settings
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/Modelsim_projects/Project/hw/hw.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Modelsim_projects/Project/hw/hw.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]

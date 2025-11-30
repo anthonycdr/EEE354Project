@@ -1,8 +1,8 @@
-Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-| Date         : Wed Jul 27 13:49:31 2022
-| Host         : sim-ro running 64-bit major release  (build 9200)
+| Tool Version : Vivado v.2025.1 (win64) Build 6140274 Thu May 22 00:12:29 MDT 2025
+| Date         : Thu Nov 20 18:01:28 2025
+| Host         : LAPTOP-54NUE9F1 running 64-bit major release  (build 9200)
 | Command      : report_methodology -file top_methodology_drc_routed.rpt -pb top_methodology_drc_routed.pb -rpx top_methodology_drc_routed.rpx
 | Design       : top
 | Device       : xc7a100tcsg324-1
@@ -22,14 +22,14 @@ Table of Contents
             Netlist: netlist
           Floorplan: design_1
       Design limits: <entire design considered>
-             Max violations: <unlimited>
-             Violations found: 71
-+-----------+------------------+-------------------------------+------------+
-| Rule      | Severity         | Description                   | Violations |
-+-----------+------------------+-------------------------------+------------+
-| TIMING-17 | Critical Warning | Non-clocked sequential cell   | 56         |
-| TIMING-18 | Warning          | Missing input or output delay | 15         |
-+-----------+------------------+-------------------------------+------------+
+             Max checks: <unlimited>
+             Checks found: 79
++-----------+------------------+-------------------------------+--------+
+| Rule      | Severity         | Description                   | Checks |
++-----------+------------------+-------------------------------+--------+
+| TIMING-17 | Critical Warning | Non-clocked sequential cell   | 64     |
+| TIMING-18 | Warning          | Missing input or output delay | 15     |
++-----------+------------------+-------------------------------+--------+
 
 2. REPORT DETAILS
 -----------------
@@ -95,297 +95,337 @@ Related violations: <none>
 
 TIMING-17#13 Critical Warning
 Non-clocked sequential cell  
-The clock pin keyboard/debounce/Iv0_reg/C is not reached by a timing clock
+The clock pin keyboard/dataprev_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#14 Critical Warning
 Non-clocked sequential cell  
-The clock pin keyboard/debounce/Iv1_reg/C is not reached by a timing clock
+The clock pin keyboard/dataprev_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#15 Critical Warning
 Non-clocked sequential cell  
-The clock pin keyboard/debounce/O0_reg/C is not reached by a timing clock
+The clock pin keyboard/dataprev_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#16 Critical Warning
 Non-clocked sequential cell  
-The clock pin keyboard/debounce/O1_reg/C is not reached by a timing clock
+The clock pin keyboard/dataprev_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#17 Critical Warning
 Non-clocked sequential cell  
-The clock pin keyboard/debounce/cnt0_reg[0]/C is not reached by a timing clock
+The clock pin keyboard/dataprev_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#18 Critical Warning
 Non-clocked sequential cell  
-The clock pin keyboard/debounce/cnt0_reg[1]/C is not reached by a timing clock
+The clock pin keyboard/dataprev_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#19 Critical Warning
 Non-clocked sequential cell  
-The clock pin keyboard/debounce/cnt1_reg[0]/C is not reached by a timing clock
+The clock pin keyboard/dataprev_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#20 Critical Warning
 Non-clocked sequential cell  
-The clock pin keyboard/debounce/cnt1_reg[1]/C is not reached by a timing clock
+The clock pin keyboard/dataprev_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#21 Critical Warning
 Non-clocked sequential cell  
-The clock pin keyboard/debounce/cnt1_reg[2]/C is not reached by a timing clock
+The clock pin keyboard/debounce/Iv0_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#22 Critical Warning
 Non-clocked sequential cell  
-The clock pin keyboard/debounce/cnt1_reg[3]/C is not reached by a timing clock
+The clock pin keyboard/debounce/Iv1_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#23 Critical Warning
 Non-clocked sequential cell  
-The clock pin keyboard/debounce/cnt1_reg[4]/C is not reached by a timing clock
+The clock pin keyboard/debounce/O0_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#24 Critical Warning
 Non-clocked sequential cell  
-The clock pin keyboard/flag_reg/C is not reached by a timing clock
+The clock pin keyboard/debounce/O1_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#25 Critical Warning
 Non-clocked sequential cell  
-The clock pin keyboard/keycode_reg[0]/C is not reached by a timing clock
+The clock pin keyboard/debounce/cnt0_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#26 Critical Warning
 Non-clocked sequential cell  
-The clock pin keyboard/keycode_reg[10]/C is not reached by a timing clock
+The clock pin keyboard/debounce/cnt0_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#27 Critical Warning
 Non-clocked sequential cell  
-The clock pin keyboard/keycode_reg[11]/C is not reached by a timing clock
+The clock pin keyboard/debounce/cnt1_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#28 Critical Warning
 Non-clocked sequential cell  
-The clock pin keyboard/keycode_reg[12]/C is not reached by a timing clock
+The clock pin keyboard/debounce/cnt1_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#29 Critical Warning
 Non-clocked sequential cell  
-The clock pin keyboard/keycode_reg[13]/C is not reached by a timing clock
+The clock pin keyboard/debounce/cnt1_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#30 Critical Warning
 Non-clocked sequential cell  
-The clock pin keyboard/keycode_reg[14]/C is not reached by a timing clock
+The clock pin keyboard/debounce/cnt1_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#31 Critical Warning
 Non-clocked sequential cell  
-The clock pin keyboard/keycode_reg[15]/C is not reached by a timing clock
+The clock pin keyboard/debounce/cnt1_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#32 Critical Warning
 Non-clocked sequential cell  
-The clock pin keyboard/keycode_reg[16]/C is not reached by a timing clock
+The clock pin keyboard/flag_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#33 Critical Warning
 Non-clocked sequential cell  
-The clock pin keyboard/keycode_reg[17]/C is not reached by a timing clock
+The clock pin keyboard/keycode_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#34 Critical Warning
 Non-clocked sequential cell  
-The clock pin keyboard/keycode_reg[18]/C is not reached by a timing clock
+The clock pin keyboard/keycode_reg[10]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#35 Critical Warning
 Non-clocked sequential cell  
-The clock pin keyboard/keycode_reg[19]/C is not reached by a timing clock
+The clock pin keyboard/keycode_reg[11]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#36 Critical Warning
 Non-clocked sequential cell  
-The clock pin keyboard/keycode_reg[1]/C is not reached by a timing clock
+The clock pin keyboard/keycode_reg[12]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#37 Critical Warning
 Non-clocked sequential cell  
-The clock pin keyboard/keycode_reg[20]/C is not reached by a timing clock
+The clock pin keyboard/keycode_reg[13]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#38 Critical Warning
 Non-clocked sequential cell  
-The clock pin keyboard/keycode_reg[21]/C is not reached by a timing clock
+The clock pin keyboard/keycode_reg[14]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#39 Critical Warning
 Non-clocked sequential cell  
-The clock pin keyboard/keycode_reg[22]/C is not reached by a timing clock
+The clock pin keyboard/keycode_reg[15]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#40 Critical Warning
 Non-clocked sequential cell  
-The clock pin keyboard/keycode_reg[23]/C is not reached by a timing clock
+The clock pin keyboard/keycode_reg[16]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#41 Critical Warning
 Non-clocked sequential cell  
-The clock pin keyboard/keycode_reg[24]/C is not reached by a timing clock
+The clock pin keyboard/keycode_reg[17]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#42 Critical Warning
 Non-clocked sequential cell  
-The clock pin keyboard/keycode_reg[25]/C is not reached by a timing clock
+The clock pin keyboard/keycode_reg[18]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#43 Critical Warning
 Non-clocked sequential cell  
-The clock pin keyboard/keycode_reg[26]/C is not reached by a timing clock
+The clock pin keyboard/keycode_reg[19]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#44 Critical Warning
 Non-clocked sequential cell  
-The clock pin keyboard/keycode_reg[27]/C is not reached by a timing clock
+The clock pin keyboard/keycode_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#45 Critical Warning
 Non-clocked sequential cell  
-The clock pin keyboard/keycode_reg[28]/C is not reached by a timing clock
+The clock pin keyboard/keycode_reg[20]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#46 Critical Warning
 Non-clocked sequential cell  
-The clock pin keyboard/keycode_reg[29]/C is not reached by a timing clock
+The clock pin keyboard/keycode_reg[21]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#47 Critical Warning
 Non-clocked sequential cell  
-The clock pin keyboard/keycode_reg[2]/C is not reached by a timing clock
+The clock pin keyboard/keycode_reg[22]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#48 Critical Warning
 Non-clocked sequential cell  
-The clock pin keyboard/keycode_reg[30]/C is not reached by a timing clock
+The clock pin keyboard/keycode_reg[23]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#49 Critical Warning
 Non-clocked sequential cell  
-The clock pin keyboard/keycode_reg[31]/C is not reached by a timing clock
+The clock pin keyboard/keycode_reg[24]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#50 Critical Warning
 Non-clocked sequential cell  
-The clock pin keyboard/keycode_reg[3]/C is not reached by a timing clock
+The clock pin keyboard/keycode_reg[25]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#51 Critical Warning
 Non-clocked sequential cell  
-The clock pin keyboard/keycode_reg[4]/C is not reached by a timing clock
+The clock pin keyboard/keycode_reg[26]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#52 Critical Warning
 Non-clocked sequential cell  
-The clock pin keyboard/keycode_reg[5]/C is not reached by a timing clock
+The clock pin keyboard/keycode_reg[27]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#53 Critical Warning
 Non-clocked sequential cell  
-The clock pin keyboard/keycode_reg[6]/C is not reached by a timing clock
+The clock pin keyboard/keycode_reg[28]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#54 Critical Warning
 Non-clocked sequential cell  
-The clock pin keyboard/keycode_reg[7]/C is not reached by a timing clock
+The clock pin keyboard/keycode_reg[29]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#55 Critical Warning
 Non-clocked sequential cell  
-The clock pin keyboard/keycode_reg[8]/C is not reached by a timing clock
+The clock pin keyboard/keycode_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#56 Critical Warning
+Non-clocked sequential cell  
+The clock pin keyboard/keycode_reg[30]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#57 Critical Warning
+Non-clocked sequential cell  
+The clock pin keyboard/keycode_reg[31]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#58 Critical Warning
+Non-clocked sequential cell  
+The clock pin keyboard/keycode_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#59 Critical Warning
+Non-clocked sequential cell  
+The clock pin keyboard/keycode_reg[4]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#60 Critical Warning
+Non-clocked sequential cell  
+The clock pin keyboard/keycode_reg[5]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#61 Critical Warning
+Non-clocked sequential cell  
+The clock pin keyboard/keycode_reg[6]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#62 Critical Warning
+Non-clocked sequential cell  
+The clock pin keyboard/keycode_reg[7]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#63 Critical Warning
+Non-clocked sequential cell  
+The clock pin keyboard/keycode_reg[8]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#64 Critical Warning
 Non-clocked sequential cell  
 The clock pin keyboard/keycode_reg[9]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-18#1 Warning
 Missing input or output delay  
-An output delay is missing on AN[0] relative to clock(s) sys_clk_pin
+An output delay is missing on AN[0] relative to the rising and/or falling clock edge(s) of sys_clk_pin.
 Related violations: <none>
 
 TIMING-18#2 Warning
 Missing input or output delay  
-An output delay is missing on AN[1] relative to clock(s) sys_clk_pin
+An output delay is missing on AN[1] relative to the rising and/or falling clock edge(s) of sys_clk_pin.
 Related violations: <none>
 
 TIMING-18#3 Warning
 Missing input or output delay  
-An output delay is missing on AN[2] relative to clock(s) sys_clk_pin
+An output delay is missing on AN[2] relative to the rising and/or falling clock edge(s) of sys_clk_pin.
 Related violations: <none>
 
 TIMING-18#4 Warning
 Missing input or output delay  
-An output delay is missing on AN[3] relative to clock(s) sys_clk_pin
+An output delay is missing on AN[3] relative to the rising and/or falling clock edge(s) of sys_clk_pin.
 Related violations: <none>
 
 TIMING-18#5 Warning
 Missing input or output delay  
-An output delay is missing on AN[4] relative to clock(s) sys_clk_pin
+An output delay is missing on AN[4] relative to the rising and/or falling clock edge(s) of sys_clk_pin.
 Related violations: <none>
 
 TIMING-18#6 Warning
 Missing input or output delay  
-An output delay is missing on AN[5] relative to clock(s) sys_clk_pin
+An output delay is missing on AN[5] relative to the rising and/or falling clock edge(s) of sys_clk_pin.
 Related violations: <none>
 
 TIMING-18#7 Warning
 Missing input or output delay  
-An output delay is missing on AN[6] relative to clock(s) sys_clk_pin
+An output delay is missing on AN[6] relative to the rising and/or falling clock edge(s) of sys_clk_pin.
 Related violations: <none>
 
 TIMING-18#8 Warning
 Missing input or output delay  
-An output delay is missing on AN[7] relative to clock(s) sys_clk_pin
+An output delay is missing on AN[7] relative to the rising and/or falling clock edge(s) of sys_clk_pin.
 Related violations: <none>
 
 TIMING-18#9 Warning
 Missing input or output delay  
-An output delay is missing on SEG[0] relative to clock(s) sys_clk_pin
+An output delay is missing on SEG[0] relative to the rising and/or falling clock edge(s) of sys_clk_pin.
 Related violations: <none>
 
 TIMING-18#10 Warning
 Missing input or output delay  
-An output delay is missing on SEG[1] relative to clock(s) sys_clk_pin
+An output delay is missing on SEG[1] relative to the rising and/or falling clock edge(s) of sys_clk_pin.
 Related violations: <none>
 
 TIMING-18#11 Warning
 Missing input or output delay  
-An output delay is missing on SEG[2] relative to clock(s) sys_clk_pin
+An output delay is missing on SEG[2] relative to the rising and/or falling clock edge(s) of sys_clk_pin.
 Related violations: <none>
 
 TIMING-18#12 Warning
 Missing input or output delay  
-An output delay is missing on SEG[3] relative to clock(s) sys_clk_pin
+An output delay is missing on SEG[3] relative to the rising and/or falling clock edge(s) of sys_clk_pin.
 Related violations: <none>
 
 TIMING-18#13 Warning
 Missing input or output delay  
-An output delay is missing on SEG[4] relative to clock(s) sys_clk_pin
+An output delay is missing on SEG[4] relative to the rising and/or falling clock edge(s) of sys_clk_pin.
 Related violations: <none>
 
 TIMING-18#14 Warning
 Missing input or output delay  
-An output delay is missing on SEG[5] relative to clock(s) sys_clk_pin
+An output delay is missing on SEG[5] relative to the rising and/or falling clock edge(s) of sys_clk_pin.
 Related violations: <none>
 
 TIMING-18#15 Warning
 Missing input or output delay  
-An output delay is missing on SEG[6] relative to clock(s) sys_clk_pin
+An output delay is missing on SEG[6] relative to the rising and/or falling clock edge(s) of sys_clk_pin.
 Related violations: <none>
 
 

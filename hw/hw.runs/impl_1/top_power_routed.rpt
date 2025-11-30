@@ -1,8 +1,8 @@
-Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
--------------------------------------------------------------------------------------------------------------------------------
-| Tool Version     : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-| Date             : Wed Jul 27 13:49:32 2022
-| Host             : sim-ro running 64-bit major release  (build 9200)
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version     : Vivado v.2025.1 (win64) Build 6140274 Thu May 22 00:12:29 MDT 2025
+| Date             : Thu Nov 20 18:01:29 2025
+| Host             : LAPTOP-54NUE9F1 running 64-bit major release  (build 9200)
 | Command          : report_power -file top_power_routed.rpt -pb top_power_summary_routed.pb -rpx top_power_routed.rpx
 | Design           : top
 | Device           : xc7a100tcsg324-1
@@ -10,7 +10,7 @@ Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 | Grade            : commercial
 | Process          : typical
 | Characterization : Production
--------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------
 
 Power Report
 
@@ -53,14 +53,14 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |    <0.001 |        3 |       --- |             --- |
-| Slice Logic    |    <0.001 |      155 |       --- |             --- |
+| Slice Logic    |    <0.001 |      163 |       --- |             --- |
 |   LUT as Logic |    <0.001 |       40 |     63400 |            0.06 |
-|   Register     |    <0.001 |       81 |    126800 |            0.06 |
+|   Register     |    <0.001 |       89 |    126800 |            0.07 |
 |   CARRY4       |    <0.001 |        5 |     15850 |            0.03 |
 |   BUFG         |    <0.001 |        1 |        32 |            3.13 |
 |   F7/F8 Muxes  |    <0.001 |        4 |     63400 |           <0.01 |
 |   Others       |     0.000 |        8 |       --- |             --- |
-| Signals        |    <0.001 |      114 |       --- |             --- |
+| Signals        |    <0.001 |      123 |       --- |             --- |
 | I/O            |     0.014 |       20 |       210 |            9.52 |
 | Static Power   |     0.097 |          |           |                 |
 | Total          |     0.113 |          |           |                 |

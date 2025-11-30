@@ -15,7 +15,10 @@ module vga_top(
 	input ClkPort,
 	input BtnC,
 	input BtnU,
-	
+    input BtnL,
+    input BtnR,
+    input BtnD,
+		
 	//VGA signal
 	output hSync, vSync,
 	output [3:0] vgaR, vgaG, vgaB,
@@ -33,8 +36,16 @@ module vga_top(
 	wire [6:0] ssdOut;
 	wire [3:0] anode;
 	wire [11:0] rgb;
+	
+	// keyboard wires - no decoder, pass scan codes directly
+	wire [7:0] scan_code;
+	wire scan_code_ready;
+	
 	display_controller dc(.clk(ClkPort), .hSync(hSync), .vSync(vSync), .bright(bright), .hCount(hc), .vCount(vc));
-	vga_bitchange vbc(.clk(ClkPort), .bright(bright), .button(BtnU), .hCount(hc), .vCount(vc), .rgb(rgb), .score(score));
+	
+
+	vga_bitchange vbc(.clk(ClkPort), .bright(bright), .btnU(BtnU), .btnD(BtnD), .btnL(BtnL), .btnR(BtnR), .btnC(BtnC), .hCount(hc), .vCount(vc), .rgb(rgb), .score(score));
+
 	counter cnt(.clk(ClkPort), .displayNumber(score), .anode(anode), .ssdOut(ssdOut));
 	
 	assign Dp = 1;
