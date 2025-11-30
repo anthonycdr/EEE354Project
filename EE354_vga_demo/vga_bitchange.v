@@ -24,7 +24,7 @@ module vga_bitchange(
     parameter blue   = 12'b0000_0000_1111;
     parameter orange = 12'b1111_0110_0000;
 
-    // VGA timing offsets (hCount 144-783 -> x 0-639, vCount 35-514 -> y 0-479)
+    // VGA timing offsets (hCount 144-783 to 0-639, vCount 35-514 to 0-479)
     localparam h_off = 10'd144;
     localparam v_off = 10'd35;
 
@@ -85,7 +85,7 @@ module vga_bitchange(
     wire [5:0] px_grid_x = x_pos / cell_size;
     wire [5:0] px_grid_y = y_pos / cell_size;
 
-    // SEPARATE trail grids for each player
+    // separate trail grids for each player
     reg p1_trail_grid [0:grid_size-1];
     reg p2_trail_grid [0:grid_size-1];
 
