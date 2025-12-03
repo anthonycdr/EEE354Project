@@ -23,7 +23,7 @@ BtnL (Left) - Move Player 1 left
 BtnR (Right) - Move Player 1 right
 BtnC (Center) - Reset game
 
-## TECHNICAL DETAILS
+# TECHNICAL DETAILS
 
 ## Grid System
 Screen: 640x480 pixels
@@ -38,7 +38,7 @@ Cell size: 10x10 pixels
 2D Grid to 1D Array Mapping:
 index = row x 64 + column
 
-Example:
+## Example:
 Grid position (20, 15) gives index = 15 x 64 + 20 = 980
 
 ## Trail Memory:
@@ -57,7 +57,7 @@ Grid position (20, 15) gives index = 15 x 64 + 20 = 980
 10 = UP
 11 = DOWN
 
-## KEY DESIGN DECISIONS
+# KEY DESIGN DECISIONS
 
 ## Why Separate Trail Grids?
 Problem: Synthesis would hang when both players wrote to the same array, took ages to synthesize the project.
