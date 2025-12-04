@@ -290,10 +290,10 @@ module vga_bitchange(
     // collision 
     reg p1_collision;
     always @(*) begin
-        if (p1_next_in_bounds == 1) begin
-            if (p1_trail_grid[p1_next_idx] == 1) begin
+        if (p1_next_in_bounds) begin
+            if (p1_trail_grid[p1_next_idx]) begin
                 p1_collision = 1;
-            end else if (p2_trail_grid[p1_next_idx] == 1) begin
+            end else if (p2_trail_grid[p1_next_idx]) begin
                 p1_collision = 1;
             end else begin
                 p1_collision = 0;
@@ -305,10 +305,10 @@ module vga_bitchange(
     
     reg p2_collision;
     always @(*) begin
-        if (p2_next_in_bounds == 1) begin
-            if (p1_trail_grid[p2_next_idx] == 1) begin
+        if (p2_next_in_bounds) begin
+            if (p1_trail_grid[p2_next_idx]) begin
                 p2_collision = 1;
-            end else if (p2_trail_grid[p2_next_idx] == 1) begin
+            end else if (p2_trail_grid[p2_next_idx]) begin
                 p2_collision = 1;
             end else begin
                 p2_collision = 0;
@@ -320,7 +320,7 @@ module vga_bitchange(
 
     // score
     always @(posedge clk) begin
-        if (game_over == 1) begin
+        if (game_over) begin
             score <= 16'd1;
         end else begin
             score <= 16'd0;
@@ -329,16 +329,16 @@ module vga_bitchange(
 
     // p1 controls
     always @(posedge clk) begin
-        if (reset == 1) begin
+        if (reset) begin
             p1_dir <= right;
         end else begin
-            if (btnU == 1) begin
+            if (btnU) begin
                 p1_dir <= up;
-            end else if (btnD == 1) begin
+            end else if (btnD) begin
                 p1_dir <= down;
-            end else if (btnL == 1) begin
+            end else if (btnL) begin
                 p1_dir <= left;
-            end else if (btnR == 1) begin
+            end else if (btnR) begin
                 p1_dir <= right;
             end
         end
@@ -351,7 +351,7 @@ module vga_bitchange(
     // movement timer and reset logic
     always @(posedge clk) 
 	begin
-        if (reset == 1) 
+        if (reset) 
 		begin
             if (resetting == 0) 
 			begin
@@ -408,15 +408,15 @@ module vga_bitchange(
 	begin
         if (bright == 0) begin
             rgb = black;
-        end else if (game_over == 1) begin
+        end else if (game_over) begin
             rgb = red;
-        end else if (p1_head == 1) begin
+        end else if (p1_head) begin
             rgb = blue;
-        end else if (p2_head == 1) begin
+        end else if (p2_head) begin
             rgb = orange;
-        end else if (p1_trail_here == 1) begin
-            rgb = blue;
-        end else if (p2_trail_here == 1) begin
+        end else if (p1_trail_here) begin
+            rgb = blue;s
+        end else if (p2_trail_here) begin
             rgb = orange;
         end else begin
             rgb = black;
