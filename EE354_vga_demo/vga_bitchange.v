@@ -9,6 +9,7 @@ module vga_bitchange(
     input btnR,
     input btnC,
     input [9:0] hCount, vCount,
+    input [31:0] keycode,       // keyboard keycodes
     output reg [11:0] rgb,
     output reg [15:0] score
 );
@@ -24,6 +25,17 @@ module vga_bitchange(
     // VGA timing offsets (hCount 144-783 to 0-639, vCount 35-514 to y 0-479)
     localparam h_off = 10'd144;
     localparam v_off = 10'd35;
+
+    // keyboard keycodes for WASD and IJKL
+    localparam [7:0] W_KEY = 8'h1D;
+    localparam [7:0] A_KEY = 8'h1C;
+    localparam [7:0] S_KEY = 8'h1B;
+    localparam [7:0] D_KEY = 8'h23;
+
+    localparam [7:0] I_KEY = 8'h43;
+    localparam [7:0] J_KEY = 8'h3B;
+    localparam [7:0] K_KEY = 8'h42;
+    localparam [7:0] L_KEY = 8'h4B;
 
     // make it from hCount to x_pos and vCount to y_pos, just easier overall bruh
     reg [9:0] x_pos;
@@ -328,17 +340,23 @@ module vga_bitchange(
     end
 
     // p1 controls
+    wire[7:0] keypress = keycode[7:0];      // reading keypresses
+    wire up1 = (keypress == W_KEY);
+    wire down1 = (keypress == S_KEY);
+    wire left1 = (keypress == A_KEY);
+    wire right1 = (keypress == D_KEY);
+
     always @(posedge clk) begin
         if (reset) begin
             p1_dir <= right;
         end else begin
-            if (btnU) begin
+            if (up1) begin
                 p1_dir <= up;
-            end else if (btnD) begin
+            end else if (down1) begin
                 p1_dir <= down;
-            end else if (btnL) begin
+            end else if (left1) begin
                 p1_dir <= left;
-            end else if (btnR) begin
+            end else if (right1) begin
                 p1_dir <= right;
             end
         end
@@ -415,7 +433,7 @@ module vga_bitchange(
         end else if (p2_head) begin
             rgb = orange;
         end else if (p1_trail_here) begin
-            rgb = blue;s
+            rgb = blue;
         end else if (p2_trail_here) begin
             rgb = orange;
         end else begin
