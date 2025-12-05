@@ -1,0 +1,144 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.1 (win64) Build 6140274 Thu May 22 00:12:29 MDT 2025
+| Date         : Thu Dec  4 17:36:16 2025
+| Host         : LAPTOP-54NUE9F1 running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file vga_top_control_sets_placed.rpt
+| Design       : vga_top
+| Device       : xc7a100t
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    66 |
+|    Minimum number of control sets                        |    66 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    94 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    66 |
+| >= 0 to < 4        |     8 |
+| >= 4 to < 6        |     2 |
+| >= 6 to < 8        |     0 |
+| >= 8 to < 10       |     1 |
+| >= 10 to < 12      |     2 |
+| >= 12 to < 14      |     1 |
+| >= 14 to < 16      |     0 |
+| >= 16              |    52 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              42 |           21 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              11 |            5 |
+| Yes          | No                    | No                     |              21 |           10 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              88 |           36 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++--------------------+------------------------------------------------+-------------------------+------------------+----------------+--------------+
+|    Clock Signal    |                  Enable Signal                 |     Set/Reset Signal    | Slice Load Count | Bel Load Count | Bels / Slice |
++--------------------+------------------------------------------------+-------------------------+------------------+----------------+--------------+
+|  dc/clk            |                                                |                         |                1 |              1 |         1.00 |
+|  dc/pulse          |                                                |                         |                1 |              1 |         1.00 |
+|  ClkPort_IBUF_BUFG | kb/debounce/O10_out                            |                         |                1 |              1 |         1.00 |
+|  ClkPort_IBUF_BUFG |                                                | kb/debounce/Iv1_i_1_n_0 |                1 |              1 |         1.00 |
+|  ClkPort_IBUF_BUFG | kb/debounce/O01_out                            |                         |                1 |              1 |         1.00 |
+|  ClkPort_IBUF_BUFG | kb/debounce/clear                              |                         |                1 |              1 |         1.00 |
+|  ClkPort_IBUF_BUFG | kb/debounce/Iv1_i_1_n_0                        |                         |                1 |              1 |         1.00 |
+|  ClkPort_IBUF_BUFG | vbc/resetting_i_1_n_0                          |                         |                1 |              1 |         1.00 |
+| ~kb/debounce/O0    | kb/cnt                                         | kb/cnt[3]_i_1_n_0       |                1 |              4 |         4.00 |
+|  ClkPort_IBUF_BUFG | kb/debounce/cnt1[3]_i_1_n_0                    | kb/debounce/Iv1_i_1_n_0 |                1 |              4 |         4.00 |
+| ~kb/debounce/O0    |                                                |                         |                6 |              9 |         1.50 |
+|  dc/clk            |                                                | dc/hCount[9]_i_1_n_0    |                4 |             10 |         2.50 |
+|  dc/clk            | dc/hCount[9]_i_1_n_0                           | dc/vCount[9]_i_1_n_0    |                4 |             10 |         2.50 |
+|  ClkPort_IBUF_BUFG | vbc/reset_counter                              | vbc/p2_y[9]_i_1_n_0     |                3 |             12 |         4.00 |
+|  ClkPort_IBUF_BUFG | vbc/p1_trail_grid_reg_r1_768_895_0_0_i_1_n_0   |                         |                4 |             16 |         4.00 |
+|  ClkPort_IBUF_BUFG | vbc/p1_trail_grid_reg_r1_640_767_0_0_i_1_n_0   |                         |                4 |             16 |         4.00 |
+|  ClkPort_IBUF_BUFG | vbc/p1_trail_grid_reg_r1_896_1023_0_0_i_1_n_0  |                         |                4 |             16 |         4.00 |
+|  ClkPort_IBUF_BUFG | vbc/p1_trail_grid_reg_r1_512_639_0_0_i_1_n_0   |                         |                4 |             16 |         4.00 |
+|  ClkPort_IBUF_BUFG | vbc/p2_trail_grid_reg_r1_0_127_0_0_i_2_n_0     |                         |                4 |             16 |         4.00 |
+|  ClkPort_IBUF_BUFG | vbc/p2_trail_grid_reg_r1_2048_2175_0_0_i_1_n_0 |                         |                4 |             16 |         4.00 |
+|  ClkPort_IBUF_BUFG | vbc/p2_trail_grid_reg_r1_1152_1279_0_0_i_1_n_0 |                         |                4 |             16 |         4.00 |
+|  ClkPort_IBUF_BUFG | vbc/p2_trail_grid_reg_r1_1664_1791_0_0_i_1_n_0 |                         |                4 |             16 |         4.00 |
+|  ClkPort_IBUF_BUFG | vbc/p2_trail_grid_reg_r1_2176_2303_0_0_i_1_n_0 |                         |                4 |             16 |         4.00 |
+|  ClkPort_IBUF_BUFG | vbc/p2_trail_grid_reg_r1_2688_2815_0_0_i_1_n_0 |                         |                4 |             16 |         4.00 |
+|  ClkPort_IBUF_BUFG | vbc/p2_trail_grid_reg_r1_1536_1663_0_0_i_1_n_0 |                         |                4 |             16 |         4.00 |
+|  ClkPort_IBUF_BUFG | vbc/p2_trail_grid_reg_r1_2304_2431_0_0_i_1_n_0 |                         |                4 |             16 |         4.00 |
+|  ClkPort_IBUF_BUFG | vbc/p2_trail_grid_reg_r1_1408_1535_0_0_i_1_n_0 |                         |                4 |             16 |         4.00 |
+|  ClkPort_IBUF_BUFG | vbc/p2_trail_grid_reg_r1_2560_2687_0_0_i_1_n_0 |                         |                4 |             16 |         4.00 |
+|  ClkPort_IBUF_BUFG | vbc/p2_trail_grid_reg_r1_1792_1919_0_0_i_1_n_0 |                         |                4 |             16 |         4.00 |
+|  ClkPort_IBUF_BUFG | vbc/p2_trail_grid_reg_r1_128_255_0_0_i_1_n_0   |                         |                4 |             16 |         4.00 |
+|  ClkPort_IBUF_BUFG | vbc/p2_trail_grid_reg_r1_1280_1407_0_0_i_1_n_0 |                         |                4 |             16 |         4.00 |
+|  ClkPort_IBUF_BUFG | vbc/p2_trail_grid_reg_r1_1920_2047_0_0_i_1_n_0 |                         |                4 |             16 |         4.00 |
+|  ClkPort_IBUF_BUFG | vbc/p2_trail_grid_reg_r1_2432_2559_0_0_i_1_n_0 |                         |                4 |             16 |         4.00 |
+|  ClkPort_IBUF_BUFG | vbc/p2_trail_grid_reg_r1_256_383_0_0_i_1_n_0   |                         |                4 |             16 |         4.00 |
+|  ClkPort_IBUF_BUFG | vbc/p2_trail_grid_reg_r1_2816_2943_0_0_i_1_n_0 |                         |                4 |             16 |         4.00 |
+|  ClkPort_IBUF_BUFG | vbc/p2_trail_grid_reg_r1_1024_1151_0_0_i_1_n_0 |                         |                4 |             16 |         4.00 |
+|  ClkPort_IBUF_BUFG | vbc/p2_trail_grid_reg_r1_640_767_0_0_i_1_n_0   |                         |                4 |             16 |         4.00 |
+|  ClkPort_IBUF_BUFG | vbc/p2_trail_grid_reg_r1_896_1023_0_0_i_1_n_0  |                         |                4 |             16 |         4.00 |
+|  ClkPort_IBUF_BUFG | vbc/p2_trail_grid_reg_r1_2944_3071_0_0_i_1_n_0 |                         |                4 |             16 |         4.00 |
+|  ClkPort_IBUF_BUFG | vbc/p2_trail_grid_reg_r1_512_639_0_0_i_1_n_0   |                         |                4 |             16 |         4.00 |
+|  ClkPort_IBUF_BUFG | vbc/p2_trail_grid_reg_r1_384_511_0_0_i_1_n_0   |                         |                4 |             16 |         4.00 |
+|  ClkPort_IBUF_BUFG | vbc/p2_trail_grid_reg_r1_768_895_0_0_i_1_n_0   |                         |                4 |             16 |         4.00 |
+|  ClkPort_IBUF_BUFG | vbc/p1_trail_grid_reg_r1_1792_1919_0_0_i_1_n_0 |                         |                4 |             16 |         4.00 |
+|  ClkPort_IBUF_BUFG | vbc/p1_trail_grid_reg_r1_2304_2431_0_0_i_1_n_0 |                         |                4 |             16 |         4.00 |
+|  ClkPort_IBUF_BUFG | vbc/p1_trail_grid_reg_r1_0_127_0_0_i_2_n_0     |                         |                4 |             16 |         4.00 |
+|  ClkPort_IBUF_BUFG | vbc/p1_trail_grid_reg_r1_128_255_0_0_i_1_n_0   |                         |                4 |             16 |         4.00 |
+|  ClkPort_IBUF_BUFG | vbc/p1_trail_grid_reg_r1_1536_1663_0_0_i_1_n_0 |                         |                4 |             16 |         4.00 |
+|  ClkPort_IBUF_BUFG | vbc/p1_trail_grid_reg_r1_1280_1407_0_0_i_1_n_0 |                         |                4 |             16 |         4.00 |
+|  ClkPort_IBUF_BUFG | vbc/p1_trail_grid_reg_r1_1920_2047_0_0_i_1_n_0 |                         |                4 |             16 |         4.00 |
+|  ClkPort_IBUF_BUFG | vbc/p1_trail_grid_reg_r1_2176_2303_0_0_i_1_n_0 |                         |                4 |             16 |         4.00 |
+|  ClkPort_IBUF_BUFG | vbc/p1_trail_grid_reg_r1_1408_1535_0_0_i_1_n_0 |                         |                4 |             16 |         4.00 |
+|  ClkPort_IBUF_BUFG | vbc/p1_trail_grid_reg_r1_1024_1151_0_0_i_1_n_0 |                         |                4 |             16 |         4.00 |
+|  ClkPort_IBUF_BUFG | vbc/p1_trail_grid_reg_r1_1152_1279_0_0_i_1_n_0 |                         |                4 |             16 |         4.00 |
+|  ClkPort_IBUF_BUFG | vbc/p1_trail_grid_reg_r1_2048_2175_0_0_i_1_n_0 |                         |                4 |             16 |         4.00 |
+|  ClkPort_IBUF_BUFG | vbc/p1_trail_grid_reg_r1_2560_2687_0_0_i_1_n_0 |                         |                4 |             16 |         4.00 |
+|  ClkPort_IBUF_BUFG | vbc/p1_trail_grid_reg_r1_1664_1791_0_0_i_1_n_0 |                         |                4 |             16 |         4.00 |
+|  ClkPort_IBUF_BUFG | vbc/p1_trail_grid_reg_r1_2816_2943_0_0_i_1_n_0 |                         |                4 |             16 |         4.00 |
+|  ClkPort_IBUF_BUFG | vbc/p1_trail_grid_reg_r1_2432_2559_0_0_i_1_n_0 |                         |                4 |             16 |         4.00 |
+|  ClkPort_IBUF_BUFG | vbc/p1_trail_grid_reg_r1_2944_3071_0_0_i_1_n_0 |                         |                4 |             16 |         4.00 |
+|  ClkPort_IBUF_BUFG | vbc/p1_trail_grid_reg_r1_256_383_0_0_i_1_n_0   |                         |                4 |             16 |         4.00 |
+|  ClkPort_IBUF_BUFG | vbc/p1_trail_grid_reg_r1_384_511_0_0_i_1_n_0   |                         |                4 |             16 |         4.00 |
+|  kb/flag           | kb/dataprev[7]_i_1_n_0                         |                         |                5 |             16 |         3.20 |
+|  ClkPort_IBUF_BUFG | vbc/p1_trail_grid_reg_r1_2688_2815_0_0_i_1_n_0 |                         |                4 |             16 |         4.00 |
+|  ClkPort_IBUF_BUFG | vbc/move_timer[0]_i_1_n_0                      | vbc/p2_y[9]_i_1_n_0     |                6 |             22 |         3.67 |
+|  ClkPort_IBUF_BUFG |                                                |                         |               13 |             31 |         2.38 |
+|  ClkPort_IBUF_BUFG | vbc/p2_y[9]_i_2_n_0                            | vbc/p2_y[9]_i_1_n_0     |               21 |             36 |         1.71 |
++--------------------+------------------------------------------------+-------------------------+------------------+----------------+--------------+
+
+

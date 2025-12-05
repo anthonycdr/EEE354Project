@@ -37,6 +37,8 @@ module vga_bitchange(
     localparam [7:0] K_KEY = 8'h42;
     localparam [7:0] L_KEY = 8'h4B;
 
+    reg winner; // 0 for p1, 1 for p2
+
     // make it from hCount to x_pos and vCount to y_pos, just easier overall bruh
     reg [9:0] x_pos;
     always @(*) begin
@@ -84,6 +86,7 @@ module vga_bitchange(
     // player 2 orange
     reg [9:0] p2_x = 10'd400;
     reg [9:0] p2_y = 10'd240;
+    reg [1:0] p2_dir = left;  // Player 2 direction for keyboard
 
     // player heads
     reg p1_head;
@@ -178,12 +181,12 @@ module vga_bitchange(
         end
     end
 
-    // indices into trail grids, basically getting which cell each player is on later on 
+    // indices into trail grids, basically getting which cell each player is on later on convert from 2d into 1d
     wire [11:0] p1_idx = p1_grid_y * grid_w + p1_grid_x;
     wire [11:0] p2_idx = p2_grid_y * grid_w + p2_grid_x;
     wire [11:0] px_idx = px_grid_y * grid_w + px_grid_x;
 
-    // get trails at current pixel
+    // get trails at current pixel, check if the current pixel has a trail
     reg p1_trail_here;
     reg p2_trail_here;
     always @(*) begin
@@ -206,7 +209,7 @@ module vga_bitchange(
     end
 
     // movement timer
-    reg [23:0] move_timer = 24'd0;
+    reg [21:0] move_timer = 24'd0;
     reg game_over = 1'b0;
     wire reset = btnC;
 
@@ -248,19 +251,45 @@ module vga_bitchange(
         end
     end
 
-    // p2 just moves left
+    // p2 movement based on direction
     reg [9:0] p2_next_x;
     reg [9:0] p2_next_y;
     always @(*) begin
-        if (p2_x == 10'd0) begin
-            p2_next_x = 10'd630;
+        if (p2_dir == right) begin
+            if (p2_x+ cell_size >= 10'd640) begin
+                p2_next_x = 10'd0;
+            end else begin
+                p2_next_x = p2_x +cell_size;
+            end
+            p2_next_y = p2_y;
+        end else if (p2_dir == left) begin
+            if (p2_x == 10'd0) begin
+                p2_next_x = 10'd630;
+            end else begin
+                p2_next_x = p2_x- cell_size;
+            end
+            p2_next_y = p2_y;
+        end else if (p2_dir == up) begin
+            p2_next_x = p2_x;
+            if (p2_y == 10'd0) begin
+                p2_next_y = 10'd470;
+            end else begin
+                p2_next_y = p2_y -cell_size;
+            end
+        end else if (p2_dir == down) begin
+            p2_next_x = p2_x;
+            if (p2_y +cell_size >= 10'd480) begin
+                p2_next_y = 10'd0;
+            end else begin
+                p2_next_y = p2_y+ cell_size;
+            end
         end else begin
-            p2_next_x = p2_x - cell_size;
+            p2_next_x = p2_x;
+            p2_next_y = p2_y;
         end
-        p2_next_y = p2_y;
     end
 
-    // next grid coords
+    // next position grid coords
     wire [5:0] p1_next_grid_x = p1_next_x / cell_size;
     wire [5:0] p1_next_grid_y = p1_next_y / cell_size;
     
@@ -331,6 +360,7 @@ module vga_bitchange(
     end
 
     // score
+// 0 for p1, 1 for p2
     always @(posedge clk) begin
         if (game_over) begin
             score <= 16'd1;
@@ -350,14 +380,36 @@ module vga_bitchange(
         if (reset) begin
             p1_dir <= right;
         end else begin
-            if (up1) begin
+            if (up1 && (p1_dir != down)) begin
                 p1_dir <= up;
-            end else if (down1) begin
+            end else if (down1 && (p1_dir != up)) begin
                 p1_dir <= down;
-            end else if (left1) begin
+            end else if (left1 && (p1_dir != right)) begin
                 p1_dir <= left;
-            end else if (right1) begin
+            end else if (right1 && (p1_dir != left)) begin
                 p1_dir <= right;
+            end
+        end
+    end
+
+    // p2 controls with IJKL keys
+    wire up2 = (keypress == I_KEY);
+    wire down2 = (keypress == K_KEY);
+    wire left2 = (keypress == J_KEY);
+    wire right2 = (keypress == L_KEY);
+
+    always @(posedge clk) begin
+        if (reset) begin
+            p2_dir <= left;
+        end else begin
+            if (up2 && (p2_dir != down)) begin
+                p2_dir <= up;
+            end else if (down2 && (p2_dir != up)) begin
+                p2_dir <= down;
+            end else if (left2 && (p2_dir != right)) begin
+                p2_dir <= left;
+            end else if (right2 && (p2_dir != left)) begin
+                p2_dir <= right;
             end
         end
     end
@@ -397,13 +449,15 @@ module vga_bitchange(
 		
 		else 
 		begin
-            move_timer <= move_timer +24'd1;
+            move_timer <= move_timer +21'd1;
             if (move_timer == 24'd0) begin
                 if (game_over == 0) begin
                     if (p1_collision == 1) begin
                         game_over <= 1'b1;
+                        winner <= 1'b0;
                     end else if (p2_collision == 1) begin
                         game_over <= 1'b1;
+                        winner <= 1'b1;
                     end else begin
                         if (p1_in_bounds == 1) begin
                             p1_trail_grid[p1_idx] <= 1'b1;
@@ -421,13 +475,17 @@ module vga_bitchange(
         end
     end
 
-    // display
+    // display with KEY DETECTION DEBUG
     always @(*) 
 	begin
         if (bright == 0) begin
             rgb = black;
         end else if (game_over) begin
-            rgb = red;
+            if (winner == 1'b0) begin
+                rgb = orange;
+            end else begin
+                rgb = blue;
+            end
         end else if (p1_head) begin
             rgb = blue;
         end else if (p2_head) begin

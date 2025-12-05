@@ -3,8 +3,8 @@
 # SW Build 6140274 on Thu May 22 00:12:29 MDT 2025
 # IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
 # SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
-# Start of session at: Sun Nov 30 15:27:18 2025
-# Process ID         : 21092
+# Start of session at: Thu Dec  4 09:06:45 2025
+# Process ID         : 35300
 # Current directory  : C:/Modelsim_projects/Project/Tron/Tron.runs/impl_1
 # Command line       : vivado.exe -log vga_top.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source vga_top.tcl -notrace
 # Log file           : C:/Modelsim_projects/Project/Tron/Tron.runs/impl_1/vga_top.vdi
@@ -17,8 +17,8 @@
 # CPU Physical cores : 8
 # CPU Logical cores  : 16
 # Host memory        : 16422 MB
-# Swap memory        : 28998 MB
-# Total Virtual      : 45420 MB
-# Available Virtual  : 2711 MB
+# Swap memory        : 38879 MB
+# Total Virtual      : 55301 MB
+# Available Virtual  : 13313 MB
 #-----------------------------------------------------------
 source vga_top.tcl -notrace

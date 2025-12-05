@@ -56,9 +56,7 @@ if {$::dispatch::connected} {
 }
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param chipscope.maxJobs 4
 set_param general.usePosixSpawnForFork 1
-set_param xicom.use_bs_reader 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a100tcsg324-1
 
@@ -74,7 +72,9 @@ set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib {
+  C:/Modelsim_projects/Project/EE354_vga_demo/PS2Receiver.v
   C:/Modelsim_projects/Project/EE354_vga_demo/counter.v
+  C:/Modelsim_projects/Project/EE354_vga_demo/debouncer.v
   C:/Modelsim_projects/Project/EE354_vga_demo/display_controller.v
   C:/Modelsim_projects/Project/EE354_vga_demo/vga_bitchange.v
   C:/Modelsim_projects/Project/EE354_vga_demo/vga_top.v

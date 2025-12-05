@@ -2,4 +2,5 @@
 | Launch Setup Clock | Launch Hold Clock | Pin                 |
 +====================+===================+=====================+
 | ClkPort            | ClkPort           | vbc/game_over_reg/D |
+| ClkPort            | ClkPort           | vbc/winner_reg/D    |
 +--------------------+-------------------+---------------------+

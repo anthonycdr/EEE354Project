@@ -3,12 +3,12 @@
 # SW Build 6140274 on Thu May 22 00:12:29 MDT 2025
 # IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
 # SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
-# Start of session at: Sun Nov 30 13:20:08 2025
-# Process ID         : 34216
-# Current directory  : C:/Modelsim_projects/Project/Tron/Tron.runs/impl_1
-# Command line       : vivado.exe -log vga_top.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source vga_top.tcl -notrace
-# Log file           : C:/Modelsim_projects/Project/Tron/Tron.runs/impl_1/vga_top.vdi
-# Journal file       : C:/Modelsim_projects/Project/Tron/Tron.runs/impl_1\vivado.jou
+# Start of session at: Thu Dec  4 17:33:44 2025
+# Process ID         : 16756
+# Current directory  : C:/Modelsim_projects/Project/Tronish/Tronish.runs/synth_1
+# Command line       : vivado.exe -log vga_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source vga_top.tcl
+# Log file           : C:/Modelsim_projects/Project/Tronish/Tronish.runs/synth_1/vga_top.vds
+# Journal file       : C:/Modelsim_projects/Project/Tronish/Tronish.runs/synth_1\vivado.jou
 # Running On         : LAPTOP-54NUE9F1
 # Platform           : Windows Server 2016 or Windows 10
 # Operating System   : 26100
@@ -17,8 +17,8 @@
 # CPU Physical cores : 8
 # CPU Logical cores  : 16
 # Host memory        : 16422 MB
-# Swap memory        : 28998 MB
-# Total Virtual      : 45420 MB
-# Available Virtual  : 6139 MB
+# Swap memory        : 33285 MB
+# Total Virtual      : 49708 MB
+# Available Virtual  : 24949 MB
 #-----------------------------------------------------------
 source vga_top.tcl -notrace

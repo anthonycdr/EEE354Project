@@ -18,8 +18,8 @@ module vga_top(
     input BtnL,
     input BtnR,
     input BtnD,
-	input PS2Clk,	// keyboard
-	input PS2Data,	// keyboard
+	input PS2_CLK,	// keyboard
+	input PS2_DATA,	// keyboard
 		
 	//VGA signal
 	output hSync, vSync,
@@ -44,12 +44,13 @@ module vga_top(
 	//wire [7:0] scan_code;
 	//wire scan_code_ready;
 
-	PS2Receiver kb(.clk(Clkport), .kclk (PS2Clk), .kdata (PS2Data), .keycodeout(keycode));
+	PS2Receiver kb(.clk(ClkPort), .kclk(PS2_CLK), .kdata(PS2_DATA), .keycodeout(keycode));
 	
 	display_controller dc(.clk(ClkPort), .hSync(hSync), .vSync(vSync), .bright(bright), .hCount(hc), .vCount(vc));
 
 	vga_bitchange vbc(.clk(ClkPort), .bright(bright), .btnU(BtnU), .btnD(BtnD), .btnL(BtnL), .btnR(BtnR), .btnC(BtnC), .hCount(hc), .vCount(vc), .rgb(rgb), .score(score), .keycode(keycode));
 
+	// Show game score on 7-segment
 	counter cnt(.clk(ClkPort), .displayNumber(score), .anode(anode), .ssdOut(ssdOut));
 	
 	assign Dp = 1;

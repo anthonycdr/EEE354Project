@@ -3,8 +3,8 @@
 # SW Build 6140274 on Thu May 22 00:12:29 MDT 2025
 # IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
 # SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
-# Start of session at: Sun Nov 30 15:26:16 2025
-# Process ID         : 29484
+# Start of session at: Thu Dec  4 09:05:29 2025
+# Process ID         : 34128
 # Current directory  : C:/Modelsim_projects/Project/Tron/Tron.runs/synth_1
 # Command line       : vivado.exe -log vga_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source vga_top.tcl
 # Log file           : C:/Modelsim_projects/Project/Tron/Tron.runs/synth_1/vga_top.vds
@@ -17,9 +17,9 @@
 # CPU Physical cores : 8
 # CPU Logical cores  : 16
 # Host memory        : 16422 MB
-# Swap memory        : 28998 MB
-# Total Virtual      : 45420 MB
-# Available Virtual  : 2466 MB
+# Swap memory        : 38879 MB
+# Total Virtual      : 55301 MB
+# Available Virtual  : 13070 MB
 #-----------------------------------------------------------
 source vga_top.tcl -notrace
 Command: read_checkpoint -auto_incremental -incremental C:/Modelsim_projects/Project/Tron/Tron.srcs/utils_1/imports/synth_1/vga_top.dcp
@@ -34,37 +34,73 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 38796
+INFO: [Synth 8-7075] Helper process launched with PID 39436
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1207.117 ; gain = 495.008
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1205.070 ; gain = 495.254
 ---------------------------------------------------------------------------------
+WARNING: [Synth 8-9694] invalid size of integer constant literal [C:/Modelsim_projects/Project/EE354_vga_demo/PS2Receiver.v:39]
+INFO: [Synth 8-11241] undeclared symbol 'Clkport', assumed default net type 'wire' [C:/Modelsim_projects/Project/EE354_vga_demo/vga_top.v:47]
 INFO: [Synth 8-6157] synthesizing module 'vga_top' [C:/Modelsim_projects/Project/EE354_vga_demo/vga_top.v:14]
+INFO: [Synth 8-6157] synthesizing module 'PS2Receiver' [C:/Modelsim_projects/Project/EE354_vga_demo/PS2Receiver.v:23]
+INFO: [Synth 8-6157] synthesizing module 'debouncer' [C:/Modelsim_projects/Project/EE354_vga_demo/debouncer.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'debouncer' (0#1) [C:/Modelsim_projects/Project/EE354_vga_demo/debouncer.v:23]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Modelsim_projects/Project/EE354_vga_demo/PS2Receiver.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'PS2Receiver' (0#1) [C:/Modelsim_projects/Project/EE354_vga_demo/PS2Receiver.v:23]
 INFO: [Synth 8-6157] synthesizing module 'display_controller' [C:/Modelsim_projects/Project/EE354_vga_demo/display_controller.v:24]
 INFO: [Synth 8-6155] done synthesizing module 'display_controller' (0#1) [C:/Modelsim_projects/Project/EE354_vga_demo/display_controller.v:24]
-INFO: [Synth 8-6157] synthesizing module 'vga_bitchange' [C:/Modelsim_projects/Project/EE354_vga_demo/vga_bitchange.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'vga_bitchange' (0#1) [C:/Modelsim_projects/Project/EE354_vga_demo/vga_bitchange.v:6]
+INFO: [Synth 8-6157] synthesizing module 'vga_bitchange' [C:/Modelsim_projects/Project/EE354_vga_demo/vga_bitchange.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'vga_bitchange' (0#1) [C:/Modelsim_projects/Project/EE354_vga_demo/vga_bitchange.v:3]
 INFO: [Synth 8-6157] synthesizing module 'counter' [C:/Modelsim_projects/Project/EE354_vga_demo/counter.v:21]
 INFO: [Synth 8-6155] done synthesizing module 'counter' (0#1) [C:/Modelsim_projects/Project/EE354_vga_demo/counter.v:21]
 INFO: [Synth 8-6155] done synthesizing module 'vga_top' (0#1) [C:/Modelsim_projects/Project/EE354_vga_demo/vga_top.v:14]
+WARNING: [Synth 8-3848] Net Clkport in module/entity vga_top does not have driver. [C:/Modelsim_projects/Project/EE354_vga_demo/vga_top.v:47]
 WARNING: [Synth 8-3917] design vga_top has port An4 driven by constant 1
 WARNING: [Synth 8-3917] design vga_top has port An5 driven by constant 1
 WARNING: [Synth 8-3917] design vga_top has port An6 driven by constant 1
 WARNING: [Synth 8-3917] design vga_top has port An7 driven by constant 1
 WARNING: [Synth 8-3917] design vga_top has port Dp driven by constant 1
 WARNING: [Synth 8-3917] design vga_top has port QuadSpiFlashCS driven by constant 1
+WARNING: [Synth 8-7129] Port btnU in module vga_bitchange is either unconnected or has no load
+WARNING: [Synth 8-7129] Port btnD in module vga_bitchange is either unconnected or has no load
+WARNING: [Synth 8-7129] Port btnL in module vga_bitchange is either unconnected or has no load
+WARNING: [Synth 8-7129] Port btnR in module vga_bitchange is either unconnected or has no load
+WARNING: [Synth 8-7129] Port keycode[31] in module vga_bitchange is either unconnected or has no load
+WARNING: [Synth 8-7129] Port keycode[30] in module vga_bitchange is either unconnected or has no load
+WARNING: [Synth 8-7129] Port keycode[29] in module vga_bitchange is either unconnected or has no load
+WARNING: [Synth 8-7129] Port keycode[28] in module vga_bitchange is either unconnected or has no load
+WARNING: [Synth 8-7129] Port keycode[27] in module vga_bitchange is either unconnected or has no load
+WARNING: [Synth 8-7129] Port keycode[26] in module vga_bitchange is either unconnected or has no load
+WARNING: [Synth 8-7129] Port keycode[25] in module vga_bitchange is either unconnected or has no load
+WARNING: [Synth 8-7129] Port keycode[24] in module vga_bitchange is either unconnected or has no load
+WARNING: [Synth 8-7129] Port keycode[23] in module vga_bitchange is either unconnected or has no load
+WARNING: [Synth 8-7129] Port keycode[22] in module vga_bitchange is either unconnected or has no load
+WARNING: [Synth 8-7129] Port keycode[21] in module vga_bitchange is either unconnected or has no load
+WARNING: [Synth 8-7129] Port keycode[20] in module vga_bitchange is either unconnected or has no load
+WARNING: [Synth 8-7129] Port keycode[19] in module vga_bitchange is either unconnected or has no load
+WARNING: [Synth 8-7129] Port keycode[18] in module vga_bitchange is either unconnected or has no load
+WARNING: [Synth 8-7129] Port keycode[17] in module vga_bitchange is either unconnected or has no load
+WARNING: [Synth 8-7129] Port keycode[16] in module vga_bitchange is either unconnected or has no load
+WARNING: [Synth 8-7129] Port keycode[15] in module vga_bitchange is either unconnected or has no load
+WARNING: [Synth 8-7129] Port keycode[14] in module vga_bitchange is either unconnected or has no load
+WARNING: [Synth 8-7129] Port keycode[13] in module vga_bitchange is either unconnected or has no load
+WARNING: [Synth 8-7129] Port keycode[12] in module vga_bitchange is either unconnected or has no load
+WARNING: [Synth 8-7129] Port keycode[11] in module vga_bitchange is either unconnected or has no load
+WARNING: [Synth 8-7129] Port keycode[10] in module vga_bitchange is either unconnected or has no load
+WARNING: [Synth 8-7129] Port keycode[9] in module vga_bitchange is either unconnected or has no load
+WARNING: [Synth 8-7129] Port keycode[8] in module vga_bitchange is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1319.098 ; gain = 606.988
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1319.250 ; gain = 609.434
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1319.098 ; gain = 606.988
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1319.250 ; gain = 609.434
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1319.098 ; gain = 606.988
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1319.250 ; gain = 609.434
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1319.098 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1319.250 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -118,6 +154,9 @@ Resolution: If [get_<value>] was used to populate the object, check to make sure
 WARNING: [Vivado 12-584] No ports matched 'Sw[15]'. [C:/Modelsim_projects/Project/EE354_vga_demo/vga_demo.xdc:27]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Modelsim_projects/Project/EE354_vga_demo/vga_demo.xdc:27]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'PS2CLK'. [C:/Modelsim_projects/Project/EE354_vga_demo/vga_demo.xdc:131]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Modelsim_projects/Project/EE354_vga_demo/vga_demo.xdc:131]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 WARNING: [Vivado 12-584] No ports matched 'PS2_CLK'. [C:/Modelsim_projects/Project/EE354_vga_demo/vga_demo.xdc:189]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Modelsim_projects/Project/EE354_vga_demo/vga_demo.xdc:189]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
@@ -129,31 +168,31 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/vga_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1374.734 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1395.316 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1374.734 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1395.316 ; gain = 0.000
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1374.734 ; gain = 662.625
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1395.316 ; gain = 685.500
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1374.734 ; gain = 662.625
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1395.316 ; gain = 685.500
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1374.734 ; gain = 662.625
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1395.316 ; gain = 685.500
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1374.734 ; gain = 662.625
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1395.316 ; gain = 685.500
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -162,10 +201,16 @@ Detailed RTL Component Info :
 +---Adders : 
 	   3 Input   11 Bit       Adders := 2     
 	   2 Input   10 Bit       Adders := 11    
+	   2 Input    5 Bit       Adders := 2     
+	   2 Input    4 Bit       Adders := 1     
 +---Registers : 
+	               32 Bit    Registers := 1     
 	               10 Bit    Registers := 6     
+	                8 Bit    Registers := 2     
+	                5 Bit    Registers := 2     
+	                4 Bit    Registers := 1     
 	                2 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
+	                1 Bit    Registers := 11    
 +---RAMs : 
 	               3K Bit	(3072 X 1 bit)          RAMs := 2     
 +---Muxes : 
@@ -173,9 +218,13 @@ Detailed RTL Component Info :
 	   7 Input   12 Bit        Muxes := 1     
 	   2 Input   10 Bit        Muxes := 9     
 	   5 Input   10 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 1     
 	   4 Input    4 Bit        Muxes := 2     
-	   2 Input    2 Bit        Muxes := 6     
-	   2 Input    1 Bit        Muxes := 18    
+	   2 Input    2 Bit        Muxes := 3     
+	   4 Input    2 Bit        Muxes := 2     
+	   2 Input    1 Bit        Muxes := 21    
+	   3 Input    1 Bit        Muxes := 1     
+	  12 Input    1 Bit        Muxes := 2     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -198,8 +247,36 @@ WARNING: [Synth 8-3917] design vga_top has port An6 driven by constant 1
 WARNING: [Synth 8-3917] design vga_top has port An7 driven by constant 1
 WARNING: [Synth 8-3917] design vga_top has port Dp driven by constant 1
 WARNING: [Synth 8-3917] design vga_top has port QuadSpiFlashCS driven by constant 1
+WARNING: [Synth 8-7129] Port btnU in module vga_bitchange is either unconnected or has no load
+WARNING: [Synth 8-7129] Port btnD in module vga_bitchange is either unconnected or has no load
+WARNING: [Synth 8-7129] Port btnL in module vga_bitchange is either unconnected or has no load
+WARNING: [Synth 8-7129] Port btnR in module vga_bitchange is either unconnected or has no load
+WARNING: [Synth 8-7129] Port keycode[31] in module vga_bitchange is either unconnected or has no load
+WARNING: [Synth 8-7129] Port keycode[30] in module vga_bitchange is either unconnected or has no load
+WARNING: [Synth 8-7129] Port keycode[29] in module vga_bitchange is either unconnected or has no load
+WARNING: [Synth 8-7129] Port keycode[28] in module vga_bitchange is either unconnected or has no load
+WARNING: [Synth 8-7129] Port keycode[27] in module vga_bitchange is either unconnected or has no load
+WARNING: [Synth 8-7129] Port keycode[26] in module vga_bitchange is either unconnected or has no load
+WARNING: [Synth 8-7129] Port keycode[25] in module vga_bitchange is either unconnected or has no load
+WARNING: [Synth 8-7129] Port keycode[24] in module vga_bitchange is either unconnected or has no load
+WARNING: [Synth 8-7129] Port keycode[23] in module vga_bitchange is either unconnected or has no load
+WARNING: [Synth 8-7129] Port keycode[22] in module vga_bitchange is either unconnected or has no load
+WARNING: [Synth 8-7129] Port keycode[21] in module vga_bitchange is either unconnected or has no load
+WARNING: [Synth 8-7129] Port keycode[20] in module vga_bitchange is either unconnected or has no load
+WARNING: [Synth 8-7129] Port keycode[19] in module vga_bitchange is either unconnected or has no load
+WARNING: [Synth 8-7129] Port keycode[18] in module vga_bitchange is either unconnected or has no load
+WARNING: [Synth 8-7129] Port keycode[17] in module vga_bitchange is either unconnected or has no load
+WARNING: [Synth 8-7129] Port keycode[16] in module vga_bitchange is either unconnected or has no load
+WARNING: [Synth 8-7129] Port keycode[15] in module vga_bitchange is either unconnected or has no load
+WARNING: [Synth 8-7129] Port keycode[14] in module vga_bitchange is either unconnected or has no load
+WARNING: [Synth 8-7129] Port keycode[13] in module vga_bitchange is either unconnected or has no load
+WARNING: [Synth 8-7129] Port keycode[12] in module vga_bitchange is either unconnected or has no load
+WARNING: [Synth 8-7129] Port keycode[11] in module vga_bitchange is either unconnected or has no load
+WARNING: [Synth 8-7129] Port keycode[10] in module vga_bitchange is either unconnected or has no load
+WARNING: [Synth 8-7129] Port keycode[9] in module vga_bitchange is either unconnected or has no load
+WARNING: [Synth 8-7129] Port keycode[8] in module vga_bitchange is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 1649.328 ; gain = 937.219
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 1654.371 ; gain = 944.555
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -221,13 +298,13 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 1649.328 ; gain = 937.219
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 1654.371 ; gain = 944.555
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:00:34 . Memory (MB): peak = 1656.023 ; gain = 943.914
+Finished Timing Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 1683.648 ; gain = 973.832
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -248,7 +325,7 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 1663.598 ; gain = 951.488
+Finished Technology Mapping : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 1703.203 ; gain = 993.387
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -266,37 +343,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 1810.574 ; gain = 1098.465
+Finished IO Insertion : Time (s): cpu = 00:00:37 ; elapsed = 00:00:40 . Memory (MB): peak = 1827.555 ; gain = 1117.738
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 1810.574 ; gain = 1098.465
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:37 ; elapsed = 00:00:40 . Memory (MB): peak = 1827.555 ; gain = 1117.738
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 1810.574 ; gain = 1098.465
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 1827.555 ; gain = 1117.738
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 1810.574 ; gain = 1098.465
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 1827.555 ; gain = 1117.738
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 1810.574 ; gain = 1098.465
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 1827.555 ; gain = 1117.738
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 1810.574 ; gain = 1098.465
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 1827.555 ; gain = 1117.738
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -314,44 +391,43 @@ Report Cell Usage:
 +------+----------+------+
 |1     |BUFG      |     1|
 |2     |CARRY4    |    35|
-|3     |LUT1      |    22|
-|4     |LUT2      |    31|
-|5     |LUT3      |    74|
-|6     |LUT4      |    69|
-|7     |LUT5      |    84|
-|8     |LUT6      |   217|
-|9     |MUXF7     |    15|
-|10    |MUXF8     |     1|
-|11    |RAM128X1D |   123|
-|12    |FDRE      |   102|
-|13    |FDSE      |    10|
-|14    |IBUF      |     6|
-|15    |OBUF      |    31|
+|3     |LUT1      |     7|
+|4     |LUT2      |    26|
+|5     |LUT3      |    48|
+|6     |LUT4      |    64|
+|7     |LUT5      |    62|
+|8     |LUT6      |   168|
+|9     |MUXF7     |     6|
+|10    |RAM128X1D |    54|
+|11    |FDRE      |    95|
+|12    |FDSE      |     6|
+|13    |IBUF      |     2|
+|14    |OBUF      |    31|
 +------+----------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 1810.574 ; gain = 1098.465
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 1827.555 ; gain = 1117.738
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 7 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:28 ; elapsed = 00:00:36 . Memory (MB): peak = 1810.574 ; gain = 1042.828
-Synthesis Optimization Complete : Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 1810.574 ; gain = 1098.465
+Synthesis finished with 0 errors, 0 critical warnings and 35 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:30 ; elapsed = 00:00:38 . Memory (MB): peak = 1827.555 ; gain = 1041.672
+Synthesis Optimization Complete : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 1827.555 ; gain = 1117.738
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1819.816 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 174 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1837.723 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 95 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1823.676 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1843.945 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 123 instances were transformed.
-  RAM128X1D => RAM128X1D (MUXF7(x2), RAMD64E(x4)): 123 instances
+  A total of 54 instances were transformed.
+  RAM128X1D => RAM128X1D (MUXF7(x2), RAMD64E(x4)): 54 instances
 
-Synth Design complete | Checksum: 46f80a7b
+Synth Design complete | Checksum: 6048862a
 INFO: [Common 17-83] Releasing license: Synthesis
-29 Infos, 31 Warnings, 18 Critical Warnings and 0 Errors encountered.
+35 Infos, 90 Warnings, 19 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:39 ; elapsed = 00:00:44 . Memory (MB): peak = 1823.676 ; gain = 1313.148
+synth_design: Time (s): cpu = 00:00:41 ; elapsed = 00:01:00 . Memory (MB): peak = 1843.945 ; gain = 1336.250
 INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 1823.676 ; gain = 0.000
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1843.945 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Modelsim_projects/Project/Tron/Tron.runs/synth_1/vga_top.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file vga_top_utilization_synth.rpt -pb vga_top_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sun Nov 30 15:27:11 2025...
+INFO: [Common 17-206] Exiting Vivado at Thu Dec  4 09:06:38 2025...
