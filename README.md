@@ -17,10 +17,16 @@ trails behind them. The objective is to avoid crashing into any trail.
 - 7-segment display: Shows game over status (0 = playing, 1 = game over)
 
 ## CONTROLS
-BtnU (Up) - Move Player 1 up
-BtnD (Down) - Move Player 1 down
-BtnL (Left) - Move Player 1 left
-BtnR (Right) - Move Player 1 right
+W (Up) - Move Player 1 up
+A (Down) - Move Player 1 down
+S (Left) - Move Player 1 left
+D (Right) - Move Player 1 right
+
+I (Up) - Move Player 2 up
+J (Down) - Move Player 2 down
+K (Left) - Move Player 2 left
+L (Right) - Move Player 2 right
+
 BtnC (Center) - Reset game
 
 # TECHNICAL DETAILS
